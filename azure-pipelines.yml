@@ -20,5 +20,5 @@ stages:
   - job: build
     displayName: build and push docker image
     steps:
-    - script: "docker build image -t abhishek445/store-front: $(Build.BuildNumber .src/store-front)"
+    - script: "docker build image -t abhishek445/store-front: $(Build.BuildNumber) .src/store-front"
     - script: "docker image push abhishek445/store-front: $(Build.BuildNumber)"
